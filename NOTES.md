@@ -19,3 +19,15 @@ To start a new container and load data volume from `store`:
 ```
 docker run -it --rm --volumes-from store ubuntu:16.10
 ```
+
+To get a list of orphan data volume containers:
+
+```
+docker volume ls -qf dangling=true
+```
+
+To remove orphan data volume containers:
+
+```
+docker volume rm $(docker volume ls -qf dangling=true)
+```
