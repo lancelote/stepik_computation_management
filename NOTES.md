@@ -37,3 +37,15 @@ To remove orphan data volume containers:
 ```
 docker volume rm $(docker volume ls -qf dangling=true)
 ```
+
+## Ports Sharing
+
+```
+docker run -d --name port-export -p <port_on_host_machine>:<port_inside_container> image
+```
+
+## Connect to Existed Container
+
+```
+docker exec -it <container-name> bash
+```
