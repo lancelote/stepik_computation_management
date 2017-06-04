@@ -49,3 +49,29 @@ docker run -d --name port-export -p <port_on_host_machine>:<port_inside_containe
 ```
 docker exec -it <container-name> bash
 ```
+
+## Network
+
+Get list of networks:
+
+```
+docker network ls
+```
+
+By default there're:
+
+ - `bridge` - option by default, each container has it's own IP 
+ - `host` - copy network settings from host to container 
+ - `none` - no connection to other containers
+
+### Create Custom Network
+
+```
+docker network create custom
+```
+
+Connect container to network:
+
+```
+ docker run -it --rm --name one --network custom ubuntu:16.10
+```
