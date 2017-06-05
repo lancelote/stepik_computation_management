@@ -75,3 +75,17 @@ Connect container to network:
 ```
  docker run -it --rm --name one --network custom ubuntu:16.10
 ```
+
+## Image Creation
+
+To create an image:
+
+```
+docker commit <container> <new-image-name>
+```
+
+To view the commands which were used to create an image:
+
+```
+docker history <image-name>
+```
