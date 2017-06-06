@@ -89,3 +89,13 @@ To view the commands which were used to create an image:
 ```
 docker history <image-name>
 ```
+
+### Dockerfile
+
+To build an image from Dockerfile:
+
+```
+docker build -t <image-name> .
+```
+
+All files within Dockerfile directory will be cached.
